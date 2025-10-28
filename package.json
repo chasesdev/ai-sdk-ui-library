@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && storybook build -o public/storybook",
-    "build:next": "next build",
     "build:storybook": "storybook build -o public/storybook",
     "start": "next start",
     "lint": "next lint",
@@ -94,7 +93,7 @@
     "@storybook/addon-onboarding": "^9.1.15",
     "@storybook/addon-vitest": "^9.1.15",
     "@storybook/global": "^5.0.0",
-    "@storybook/nextjs-vite": "^9.1.15",
+    "@storybook/nextjs": "^9.1.15",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
