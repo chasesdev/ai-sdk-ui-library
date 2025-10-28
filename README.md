@@ -8,9 +8,9 @@ Explore the library in action:
 
 - 🌐 **[Live Demo](https://ai-sdk-ui-library.vercel.app)** - Main application showcase
 - 📚 **[Storybook Documentation](https://ai-sdk-ui-library.vercel.app/storybook)** - Interactive component documentation
-- 🖥️ **[Desktop Showcase](https://ai-sdk-ui-library.vercel.app/showcase/desktop)** - Full-featured desktop layout
-- 💻 **[Tablet Showcase](https://ai-sdk-ui-library.vercel.app/showcase/tablet)** - Responsive tablet layout
 - 📱 **[Mobile Showcase](https://ai-sdk-ui-library.vercel.app/showcase/mobile)** - Optimized mobile experience
+- 💻 **[Tablet Showcase](https://ai-sdk-ui-library.vercel.app/showcase/tablet)** - Responsive tablet layout
+- 🖥️ **[Desktop Showcase](https://ai-sdk-ui-library.vercel.app/showcase/desktop)** - Full-featured desktop layout
 - 🔗 **[GitHub Repository](https://github.com/chasesdev/ai-sdk-ui-library)** - Source code and contributions
 
 ## ✨ Technology Stack

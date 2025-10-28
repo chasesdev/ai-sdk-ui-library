@@ -29,9 +29,9 @@ export function Footer() {
                 Storybook
               </Button>
             </Link>
-            <Link href="/showcase/desktop">
+            <Link href="/showcase/mobile">
               <Button variant="ghost" size="sm">
-                Desktop
+                Mobile
               </Button>
             </Link>
             <Link href="/showcase/tablet">
@@ -39,9 +39,9 @@ export function Footer() {
                 Tablet
               </Button>
             </Link>
-            <Link href="/showcase/mobile">
+            <Link href="/showcase/desktop">
               <Button variant="ghost" size="sm">
-                Mobile
+                Desktop
               </Button>
             </Link>
             <a

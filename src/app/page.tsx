@@ -76,7 +76,7 @@ export default function Home() {
 
         {/* Quick Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
-          <Link href="/showcase/desktop">
+          <Link href="/showcase/mobile">
             <Button size="lg" className="gap-2 text-lg px-8 w-full sm:w-auto">
               <Component className="h-5 w-5" />
               View Showcase

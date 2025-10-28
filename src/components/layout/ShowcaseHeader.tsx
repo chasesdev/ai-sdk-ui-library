@@ -67,14 +67,14 @@ export function ShowcaseHeader({
               </Button>
             </Link>
             <div className="w-px bg-border flex-shrink-0" />
-            <Link href="/showcase/desktop">
+            <Link href="/showcase/mobile">
               <Button
-                variant={activeView === 'desktop' ? 'default' : 'outline'}
+                variant={activeView === 'mobile' ? 'default' : 'outline'}
                 size={buttonSize}
                 className={`gap-1 ${variant === 'mobile' ? 'whitespace-nowrap' : ''}`}
               >
-                <Monitor className={iconSize} />
-                <span className={textSize}>Desktop</span>
+                <Smartphone className={iconSize} />
+                <span className={textSize}>Mobile</span>
               </Button>
             </Link>
             <Link href="/showcase/tablet">
@@ -87,14 +87,14 @@ export function ShowcaseHeader({
                 <span className={textSize}>Tablet</span>
               </Button>
             </Link>
-            <Link href="/showcase/mobile">
+            <Link href="/showcase/desktop">
               <Button
-                variant={activeView === 'mobile' ? 'default' : 'outline'}
+                variant={activeView === 'desktop' ? 'default' : 'outline'}
                 size={buttonSize}
                 className={`gap-1 ${variant === 'mobile' ? 'whitespace-nowrap' : ''}`}
               >
-                <Smartphone className={iconSize} />
-                <span className={textSize}>Mobile</span>
+                <Monitor className={iconSize} />
+                <span className={textSize}>Desktop</span>
               </Button>
             </Link>
             <div className="w-px bg-border flex-shrink-0" />
