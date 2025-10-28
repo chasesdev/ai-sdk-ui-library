@@ -12,6 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import {
   BookOpen,
   Sparkles,
@@ -25,6 +26,7 @@ import {
   Search
 } from 'lucide-react';
 import { Conversation, defaultConversationMessages } from '@/components/ai-sdk/Conversation';
+import { WorkflowPlanner } from '@/components/ai-sdk/workflow';
 
 const models = [
   { id: 'gpt-4', name: 'GPT-4' },
@@ -45,6 +47,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted">
+      {/* Theme Toggle - Fixed Position */}
+      <div className="fixed top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
+
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="text-center space-y-6 mb-16">
@@ -56,13 +63,13 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Beautiful AI Components
+            Component Library
             <br />
-            <span className="text-primary">for Modern Apps</span>
+            <span className="text-primary">for AI SDK</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive collection of 29 production-ready React components designed specifically for AI-powered applications. Built with Next.js, TypeScript, and Tailwind CSS.
+            A collection of 29+ React components designed for AI-powered applications. Built with Next.js, TypeScript, and Tailwind CSS.
           </p>
         </div>
 
@@ -91,7 +98,7 @@ export default function Home() {
             Examples
           </h2>
           <p className="text-center text-muted-foreground mb-8 text-lg">
-            See our components in action with real-world use cases
+            See some real-world use cases
           </p>
 
           <div className="space-y-6">
@@ -194,52 +201,8 @@ export default function Home() {
                 </div>
               </CardHeader>
               <CardContent className="p-4">
-                <div className="h-[400px] overflow-hidden bg-muted/20 rounded-lg p-6 border">
-                  <div className="space-y-4">
-                    {/* Workflow Steps */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-40 px-4 py-3 bg-blue-50 border-2 border-blue-200 rounded-lg text-center">
-                        <div className="font-semibold text-sm">Start</div>
-                        <div className="text-xs text-muted-foreground mt-1">Initialize workflow</div>
-                      </div>
-                      <div className="flex-1 h-0.5 bg-gradient-to-r from-blue-200 to-purple-200"></div>
-                      <div className="w-40 px-4 py-3 bg-purple-50 border-2 border-purple-200 rounded-lg text-center">
-                        <div className="font-semibold text-sm">Process Data</div>
-                        <div className="text-xs text-muted-foreground mt-1">Transform input</div>
-                      </div>
-                      <div className="flex-1 h-0.5 bg-gradient-to-r from-purple-200 to-amber-200"></div>
-                      <div className="w-40 px-4 py-3 bg-amber-50 border-2 border-amber-200 rounded-lg text-center">
-                        <div className="font-semibold text-sm">Decision Point</div>
-                        <div className="text-xs text-muted-foreground mt-1">Route conditions</div>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4 pl-40">
-                      <div className="px-4 py-3 bg-green-50 border-2 border-green-200 rounded-lg text-center">
-                        <div className="font-semibold text-sm">Success Path</div>
-                        <div className="text-xs text-muted-foreground mt-1">Handle success case</div>
-                      </div>
-                      <div className="px-4 py-3 bg-red-50 border-2 border-red-200 rounded-lg text-center">
-                        <div className="font-semibold text-sm">Error Path</div>
-                        <div className="text-xs text-muted-foreground mt-1">Handle error case</div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <div className="flex-1 h-0.5 bg-gradient-to-r from-green-200 to-primary/30"></div>
-                      <div className="w-56 px-4 py-3 bg-primary/10 border-2 border-primary rounded-lg text-center">
-                        <div className="font-semibold text-sm">Complete</div>
-                        <div className="text-xs text-muted-foreground mt-1">Finalize workflow</div>
-                      </div>
-                      <div className="flex-1 h-0.5 bg-gradient-to-l from-primary/30 to-transparent"></div>
-                    </div>
-
-                    <div className="mt-6 p-4 bg-background rounded-lg border">
-                      <p className="text-sm text-muted-foreground">
-                        This interactive workflow planner helps visualize multi-step processes with branching logic and error handling. Perfect for AI-powered automation and task management.
-                      </p>
-                    </div>
-                  </div>
+                <div className="h-[600px] rounded-lg overflow-hidden border">
+                  <WorkflowPlanner />
                 </div>
               </CardContent>
             </Card>

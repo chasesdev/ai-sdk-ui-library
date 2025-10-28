@@ -1,0 +1,356 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as ReasoningStories from './Reasoning.stories';
+import * as ChainOfThoughtStories from './ChainOfThought.stories';
+import * as ToolStories from './Tool.stories';
+import * as ResponseStories from './Response.stories';
+import * as ContextStories from './Context.stories';
+import * as PlanStories from './Plan.stories';
+import * as TaskStories from './Task.stories';
+
+<Meta title="AI SDK/AI Reasoning & Planning/Category Overview" />
+
+# AI Reasoning & Planning Components
+
+Components for displaying AI reasoning processes, thought chains, tool usage, plans, and task execution. These components help users understand how AI systems think, make decisions, and execute multi-step workflows.
+
+---
+
+## Component Index
+
+- [Reasoning](#reasoning) - Display AI reasoning steps
+- [ChainOfThought](#chainofthought) - Visualize thought processes
+- [Tool](#tool) - Display tool/function calls
+- [Response](#response) - Formatted AI responses
+- [Context](#context) - Contextual information display
+- [Plan](#plan) - AI-generated plans
+- [Task](#task) - Individual task tracking
+
+---
+
+<div id="reasoning" />
+
+## Reasoning
+
+Display AI reasoning steps and thought processes with expandable details.
+
+### Default Example
+
+<Canvas of={ReasoningStories.Default} />
+
+### Props
+
+<ArgTypes of={ReasoningStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ReasoningStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Reasoning examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ReasoningStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="chainofthought" />
+
+## ChainOfThought
+
+Visualize step-by-step chain-of-thought reasoning processes.
+
+### Default Example
+
+<Canvas of={ChainOfThoughtStories.Default} />
+
+### Props
+
+<ArgTypes of={ChainOfThoughtStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ChainOfThoughtStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} ChainOfThought examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ChainOfThoughtStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="tool" />
+
+## Tool
+
+Display tool and function calls with inputs, outputs, and execution status.
+
+### Default Example
+
+<Canvas of={ToolStories.Default} />
+
+### Props
+
+<ArgTypes of={ToolStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ToolStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Tool examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ToolStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="response" />
+
+## Response
+
+Formatted display of AI responses with syntax highlighting and formatting.
+
+### Default Example
+
+<Canvas of={ResponseStories.Default} />
+
+### Props
+
+<ArgTypes of={ResponseStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ResponseStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Response examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ResponseStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="context" />
+
+## Context
+
+Display contextual information that informs AI reasoning and responses.
+
+### Default Example
+
+<Canvas of={ContextStories.Default} />
+
+### Props
+
+<ArgTypes of={ContextStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ContextStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Context examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ContextStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="plan" />
+
+## Plan
+
+Display AI-generated plans with steps, dependencies, and progress tracking.
+
+### Default Example
+
+<Canvas of={PlanStories.Default} />
+
+### Props
+
+<ArgTypes of={PlanStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(PlanStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Plan examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(PlanStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="task" />
+
+## Task
+
+Individual task component with status indicators, metadata, and actions.
+
+### Default Example
+
+<Canvas of={TaskStories.Default} />
+
+### Props
+
+<ArgTypes of={TaskStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(TaskStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Task examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(TaskStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+## Usage Together
+
+These components work together to create transparent AI workflows:
+
+```tsx
+import { Reasoning, ChainOfThought, Tool, Plan, Task } from '@/components/ai-sdk';
+
+function AIWorkflow() {
+  return (
+    <div>
+      <Reasoning steps={reasoningSteps} />
+
+      <ChainOfThought thoughts={thoughts} />
+
+      <Tool
+        name="web_search"
+        input={{ query: "latest AI news" }}
+        output={searchResults}
+        status="completed"
+      />
+
+      <Plan steps={planSteps} />
+
+      {tasks.map(task => (
+        <Task key={task.id} {...task} />
+      ))}
+    </div>
+  );
+}
+```
+
+---
+
+## Best Practices
+
+1. **Transparency**: Show reasoning steps to build user trust
+2. **Progressive Disclosure**: Use collapsible sections for detailed information
+3. **Status Indicators**: Clearly show execution status (pending, running, completed, failed)
+4. **Error Handling**: Display meaningful error messages when tools or tasks fail
+5. **Performance**: Lazy-load detailed reasoning data for large workflows

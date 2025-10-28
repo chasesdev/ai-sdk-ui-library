@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Monitor, Tablet, Smartphone, Home, BookOpen } from 'lucide-react';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 // Import all AI SDK components
 import { Actions, defaultActions } from '@/components/ai-sdk/Actions';
@@ -81,6 +82,8 @@ export default function TabletShowcase() {
                   Mobile
                 </Button>
               </Link>
+              <div className="w-px bg-border" />
+              <ThemeToggle />
             </div>
           </div>
         </div>

@@ -1,0 +1,229 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as BranchStories from './Branch.stories';
+import * as ConnectionStories from './Connection.stories';
+import * as EdgeStories from './Edge.stories';
+import * as NodeStories from './Node.stories';
+
+<Meta title="AI SDK/Graph & Visualization/Category Overview" />
+
+# Graph & Visualization Components
+
+Components for building flowcharts, decision trees, workflow visualizations, and graph-based interfaces. These components work together to create interactive visual representations of AI processes and data structures.
+
+---
+
+## Component Index
+
+- [Branch](#branch) - Workflow branches and decision points
+- [Connection](#connection) - Visual connections between elements
+- [Edge](#edge) - Graph edges with styling and labels
+- [Node](#node) - Graph nodes for workflows and diagrams
+
+---
+
+<div id="branch" />
+
+## Branch
+
+Workflow branches and decision points with conditional paths and merge points.
+
+### Default Example
+
+<Canvas of={BranchStories.Default} />
+
+### Props
+
+<ArgTypes of={BranchStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(BranchStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Branch examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(BranchStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="connection" />
+
+## Connection
+
+Visual connections between elements with arrows, labels, and styling options.
+
+### Default Example
+
+<Canvas of={ConnectionStories.Connected} />
+
+### Props
+
+<ArgTypes of={ConnectionStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ConnectionStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Connection examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ConnectionStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="edge" />
+
+## Edge
+
+Graph edges with directional indicators, labels, and customizable styling.
+
+### Default Example
+
+<Canvas of={EdgeStories.Straight} />
+
+### Props
+
+<ArgTypes of={EdgeStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(EdgeStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Edge examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(EdgeStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="node" />
+
+## Node
+
+Graph nodes for workflows, diagrams, and decision trees with various states and styles.
+
+### Default Example
+
+<Canvas of={NodeStories.Circle} />
+
+### Props
+
+<ArgTypes of={NodeStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(NodeStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Node examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(NodeStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+## Usage Together
+
+Build complete workflow visualizations by combining these components:
+
+```tsx
+import { Branch, Connection, Edge, Node } from '@/components/ai-sdk';
+
+function WorkflowVisualization() {
+  return (
+    <div className="workflow">
+      <Node id="start" type="start" label="Start Process" />
+
+      <Edge from="start" to="decision" />
+
+      <Branch id="decision" label="Check Condition">
+        <Edge from="decision" to="action1" condition="true" />
+        <Edge from="decision" to="action2" condition="false" />
+      </Branch>
+
+      <Node id="action1" type="process" label="Action A" />
+      <Node id="action2" type="process" label="Action B" />
+
+      <Connection from="action1" to="end" />
+      <Connection from="action2" to="end" />
+
+      <Node id="end" type="end" label="Complete" />
+    </div>
+  );
+}
+```
+
+---
+
+## Best Practices
+
+1. **Layout Algorithms**: Use auto-layout for complex graphs
+2. **Zoom & Pan**: Enable zooming and panning for large visualizations
+3. **Interactive Nodes**: Make nodes clickable for drill-down details
+4. **Color Coding**: Use consistent colors for node types and states
+5. **Labels**: Keep edge and node labels concise and readable
+6. **Performance**: Virtualize large graphs with many nodes/edges
+7. **Accessibility**: Provide keyboard navigation and screen reader support

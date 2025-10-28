@@ -1,0 +1,227 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as ConversationStories from './Conversation.stories';
+import * as MessageStories from './Message.stories';
+import * as PromptInputStories from './PromptInput.stories';
+import * as SuggestionStories from './Suggestion.stories';
+
+<Meta title="AI SDK/Conversation & Chat/Category Overview" />
+
+# Conversation & Chat Components
+
+Components for building chat interfaces and conversational AI experiences. These components work together to create rich, interactive conversational UIs with features like real-time messaging, avatars, timestamps, reactions, and more.
+
+---
+
+## Component Index
+
+- [Conversation](#conversation) - Full conversation interface
+- [Message](#message) - Individual message component
+- [PromptInput](#promptinput) - User input field
+- [Suggestion](#suggestion) - Quick suggestion chips
+
+---
+
+<div id="conversation" />
+
+## Conversation
+
+Full-featured conversation interface with message history, input handling, and various interaction features.
+
+### Default Example
+
+<Canvas of={ConversationStories.Default} />
+
+### Props
+
+<ArgTypes of={ConversationStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ConversationStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Conversation examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ConversationStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="message" />
+
+## Message
+
+Individual message display component with support for various roles, states, actions, and metadata.
+
+### Default Example
+
+<Canvas of={MessageStories.Default} />
+
+### Props
+
+<ArgTypes of={MessageStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(MessageStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Message examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(MessageStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="promptinput" />
+
+## PromptInput
+
+Input field for user prompts with support for suggestions, attachments, and voice input.
+
+### Default Example
+
+<Canvas of={PromptInputStories.Default} />
+
+### Props
+
+<ArgTypes of={PromptInputStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(PromptInputStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} PromptInput examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(PromptInputStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="suggestion" />
+
+## Suggestion
+
+Suggestion chip component for displaying quick response options to users.
+
+### Default Example
+
+<Canvas of={SuggestionStories.Default} />
+
+### Props
+
+<ArgTypes of={SuggestionStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(SuggestionStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Suggestion examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(SuggestionStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+## Usage Together
+
+These components work seamlessly together to create complete conversational interfaces:
+
+```tsx
+import { Conversation, Message, PromptInput, Suggestion } from '@/components/ai-sdk';
+
+function ChatInterface() {
+  return (
+    <div>
+      <Conversation messages={messages}>
+        {messages.map(msg => (
+          <Message key={msg.id} {...msg} />
+        ))}
+      </Conversation>
+
+      <div className="suggestions">
+        <Suggestion text="Tell me more" />
+        <Suggestion text="Start over" />
+      </div>
+
+      <PromptInput
+        onSubmit={handleSubmit}
+        allowAttachments
+        allowVoiceInput
+      />
+    </div>
+  );
+}
+```
+
+---
+
+## Best Practices
+
+1. **Message Ordering**: Display messages chronologically with most recent at bottom
+2. **Avatar Consistency**: Use consistent avatar styling across message roles
+3. **Loading States**: Show typing indicators for pending AI responses
+4. **Error Handling**: Display clear error states and retry options
+5. **Accessibility**: Ensure keyboard navigation and screen reader support

@@ -1,0 +1,314 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as ArtifactStories from './Artifact.stories';
+import * as BracesCodeBlockStories from './BracesCodeBlock.stories';
+import * as CanvasStories from './Canvas.stories';
+import * as ImageStories from './Image.stories';
+import * as WebPreviewStories from './WebPreview.stories';
+import * as PanelStories from './Panel.stories';
+
+<Meta title="AI SDK/Content Display/Category Overview" />
+
+# Content Display Components
+
+Components for displaying various types of AI-generated content including code, artifacts, images, web previews, and structured panels. These components ensure content is presented in an accessible, visually appealing format.
+
+---
+
+## Component Index
+
+- [Artifact](#artifact) - Display generated artifacts
+- [BracesCodeBlock](#bracescodeblock) - Syntax-highlighted code blocks
+- [Canvas](#canvas) - Drawing and visualization canvas
+- [Image](#image) - AI-generated or referenced images
+- [WebPreview](#webpreview) - Preview web pages and links
+- [Panel](#panel) - Container panels with controls
+
+---
+
+<div id="artifact" />
+
+## Artifact
+
+Display AI-generated artifacts like code, documents, data structures, and more.
+
+### Default Example
+
+<Canvas of={ArtifactStories.Default} />
+
+### Props
+
+<ArgTypes of={ArtifactStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ArtifactStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Artifact examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ArtifactStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="bracescodeblock" />
+
+## BracesCodeBlock
+
+Syntax-highlighted code blocks with language support, line numbers, and copy functionality.
+
+### Default Example
+
+<Canvas of={BracesCodeBlockStories.Default} />
+
+### Props
+
+<ArgTypes of={BracesCodeBlockStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(BracesCodeBlockStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} BracesCodeBlock examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(BracesCodeBlockStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="canvas" />
+
+## Canvas
+
+Interactive drawing and visualization canvas for diagrams, sketches, and visual content.
+
+### Default Example
+
+<Canvas of={CanvasStories.Default} />
+
+### Props
+
+<ArgTypes of={CanvasStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(CanvasStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Canvas examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(CanvasStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="image" />
+
+## Image
+
+Display AI-generated or referenced images with captions, metadata, and interaction features.
+
+### Default Example
+
+<Canvas of={ImageStories.Default} />
+
+### Props
+
+<ArgTypes of={ImageStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ImageStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Image examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ImageStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="webpreview" />
+
+## WebPreview
+
+Preview web pages, links, and online resources with thumbnails and metadata.
+
+### Default Example
+
+<Canvas of={WebPreviewStories.Default} />
+
+### Props
+
+<ArgTypes of={WebPreviewStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(WebPreviewStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} WebPreview examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(WebPreviewStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="panel" />
+
+## Panel
+
+Flexible container panels with collapsing, resizing, and customization options.
+
+### Default Example
+
+<Canvas of={PanelStories.Default} />
+
+### Props
+
+<ArgTypes of={PanelStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(PanelStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Panel examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(PanelStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+## Usage Together
+
+Combine content display components for rich multimedia experiences:
+
+```tsx
+import { Artifact, BracesCodeBlock, Image, WebPreview, Panel } from '@/components/ai-sdk';
+
+function ContentDisplay() {
+  return (
+    <Panel title="AI Generated Content">
+      <Artifact type="code">
+        <BracesCodeBlock
+          language="typescript"
+          code={generatedCode}
+        />
+      </Artifact>
+
+      <Image
+        src={generatedImage}
+        caption="AI-generated visualization"
+      />
+
+      <WebPreview
+        url="https://example.com"
+        title="Related Resource"
+      />
+    </Panel>
+  );
+}
+```
+
+---
+
+## Best Practices
+
+1. **Lazy Loading**: Load heavy content (images, previews) on-demand
+2. **Copy Actions**: Provide easy copy functionality for code and text
+3. **Syntax Highlighting**: Use appropriate language-specific highlighting
+4. **Error States**: Gracefully handle missing or failed content
+5. **Responsive Design**: Ensure content adapts to different screen sizes
+6. **Accessibility**: Include alt text for images and semantic HTML

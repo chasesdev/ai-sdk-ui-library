@@ -1,0 +1,184 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as ActionsStories from './Actions.stories';
+import * as ControlsStories from './Controls.stories';
+import * as ToolbarStories from './Toolbar.stories';
+
+<Meta title="AI SDK/Tool & Action/Category Overview" />
+
+# Tool & Action Components
+
+Interactive components for user actions, controls, and toolbar interfaces. These components provide users with intuitive ways to interact with AI systems, trigger actions, and control application behavior.
+
+---
+
+## Component Index
+
+- [Actions](#actions) - Action button groups
+- [Controls](#controls) - Playback and interaction controls
+- [Toolbar](#toolbar) - Toolbar with action buttons
+
+---
+
+<div id="actions" />
+
+## Actions
+
+Action button groups for common operations like copy, share, regenerate, and more.
+
+### Default Example
+
+<Canvas of={ActionsStories.Default} />
+
+### Props
+
+<ArgTypes of={ActionsStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ActionsStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Actions examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ActionsStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="controls" />
+
+## Controls
+
+Playback and interaction controls for media, animations, and process control.
+
+### Default Example
+
+<Canvas of={ControlsStories.Default} />
+
+### Props
+
+<ArgTypes of={ControlsStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ControlsStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Controls examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ControlsStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="toolbar" />
+
+## Toolbar
+
+Customizable toolbar with action buttons, dropdowns, and grouping.
+
+### Default Example
+
+<Canvas of={ToolbarStories.Default} />
+
+### Props
+
+<ArgTypes of={ToolbarStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ToolbarStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Toolbar examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ToolbarStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+## Usage Together
+
+Combine these components to create rich action interfaces:
+
+```tsx
+import { Actions, Controls, Toolbar } from '@/components/ai-sdk';
+
+function ActionInterface() {
+  return (
+    <div>
+      <Toolbar>
+        <Actions
+          actions={[
+            { label: 'Save', icon: 'save', onClick: handleSave },
+            { label: 'Export', icon: 'download', onClick: handleExport },
+          ]}
+        />
+      </Toolbar>
+
+      <Controls
+        onPlay={handlePlay}
+        onPause={handlePause}
+        onStop={handleStop}
+        onSkip={handleSkip}
+      />
+    </div>
+  );
+}
+```
+
+---
+
+## Best Practices
+
+1. **Icon Clarity**: Use universally recognized icons (play, pause, stop, etc.)
+2. **Keyboard Shortcuts**: Implement keyboard shortcuts for common actions
+3. **Disabled States**: Clearly indicate when actions are unavailable
+4. **Tooltips**: Provide helpful tooltips for all action buttons
+5. **Responsive Layout**: Collapse or reorganize actions on smaller screens
+6. **Loading States**: Show progress indicators during async actions

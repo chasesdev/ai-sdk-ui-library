@@ -1,0 +1,276 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as LoaderStories from './Loader.stories';
+import * as ShimmerStories from './Shimmer.stories';
+import * as InlineCitationStories from './InlineCitation.stories';
+import * as SourcesStories from './Sources.stories';
+import * as OpenInChatStories from './OpenInChat.stories';
+
+<Meta title="AI SDK/UI Elements/Category Overview" />
+
+# UI Elements Components
+
+Foundational UI elements for loading states, citations, sources, and utility components. These components provide essential functionality for creating polished AI interfaces with proper feedback and reference systems.
+
+---
+
+## Component Index
+
+- [Loader](#loader) - Loading spinners and animations
+- [Shimmer](#shimmer) - Skeleton loading shimmer effects
+- [InlineCitation](#inlinecitation) - Inline reference citations
+- [Sources](#sources) - List of information sources
+- [OpenInChat](#openinchat) - Button to open content in chat
+
+---
+
+<div id="loader" />
+
+## Loader
+
+Loading spinners and animations for async operations and content loading states.
+
+### Default Example
+
+<Canvas of={LoaderStories.Default} />
+
+### Props
+
+<ArgTypes of={LoaderStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(LoaderStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Loader examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(LoaderStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="shimmer" />
+
+## Shimmer
+
+Skeleton loading shimmer effects for content placeholders and progressive loading.
+
+### Default Example
+
+<Canvas of={ShimmerStories.Default} />
+
+### Props
+
+<ArgTypes of={ShimmerStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(ShimmerStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Shimmer examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(ShimmerStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="inlinecitation" />
+
+## InlineCitation
+
+Inline reference citations with hover previews and click-through functionality.
+
+### Default Example
+
+<Canvas of={InlineCitationStories.Default} />
+
+### Props
+
+<ArgTypes of={InlineCitationStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(InlineCitationStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} InlineCitation examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(InlineCitationStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="sources" />
+
+## Sources
+
+Display and manage lists of information sources with metadata and actions.
+
+### Default Example
+
+<Canvas of={SourcesStories.Default} />
+
+### Props
+
+<ArgTypes of={SourcesStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(SourcesStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Sources examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(SourcesStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+<div id="openinchat" />
+
+## OpenInChat
+
+Button component to open content or start conversations in a chat interface.
+
+### Default Example
+
+<Canvas of={OpenInChatStories.Default} />
+
+### Props
+
+<ArgTypes of={OpenInChatStories} />
+
+### All Examples
+
+<details>
+<summary>
+  <strong>View all {Object.keys(OpenInChatStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} OpenInChat examples</strong>
+</summary>
+
+<div style={{ marginTop: '1rem' }}>
+
+{Object.entries(OpenInChatStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1.5rem' }}>
+      <h4 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+        {storyName.replace(/([A-Z])/g, ' $1').trim()}
+      </h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</div>
+
+</details>
+
+---
+
+## Usage Together
+
+Combine UI elements to create polished, professional interfaces:
+
+```tsx
+import { Loader, Shimmer, InlineCitation, Sources, OpenInChat } from '@/components/ai-sdk';
+
+function AIResponse({ loading, content, sources }) {
+  if (loading) {
+    return (
+      <div>
+        <Shimmer type="text" lines={3} />
+        <Shimmer type="card" />
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <p>
+        {content}
+        <InlineCitation number={1} source={sources[0]} />
+      </p>
+
+      <Sources sources={sources} />
+
+      <OpenInChat
+        text="Continue in chat"
+        onClick={handleOpenChat}
+      />
+    </div>
+  );
+}
+```
+
+---
+
+## Best Practices
+
+1. **Loading States**: Always show loading indicators for async operations
+2. **Skeleton Screens**: Use Shimmer for better perceived performance
+3. **Citation Accuracy**: Ensure citations match actual sources
+4. **Source Verification**: Link to original sources when possible
+5. **Consistent Styling**: Maintain consistent visual language across UI elements
+6. **Accessibility**: Provide aria-labels for loading states and interactive elements
+7. **Performance**: Lazy-load sources and citation details

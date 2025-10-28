@@ -16,10 +16,16 @@ const config: StorybookConfig = {
   // staticDirs removed to prevent circular copy when building to public/storybook/
 
   // Set base path for production deployment at /storybook/
-  managerHead: (head) => `
-    ${head}
-    <base href="/storybook/">
-  `,
+  managerHead: (head) => {
+    // Only set base href in production build
+    if (process.env.NODE_ENV === 'production') {
+      return `
+        ${head}
+        <base href="/storybook/">
+      `;
+    }
+    return head;
+  },
 };
 
 export default config;

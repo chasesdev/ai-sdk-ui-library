@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  ChevronDown, 
-  ChevronRight, 
-  Minus2, 
-  Maximize2, 
-  X, 
+import {
+  ChevronDown,
+  ChevronRight,
+  Minimize2,
+  Maximize2,
+  X,
   Settings,
   GripVertical
 } from 'lucide-react';
@@ -177,7 +177,7 @@ export const Panel: React.FC<PanelProps> = ({
                 className="h-6 w-6 p-0"
               >
                 {isMaximized ? (
-                  <Minus2 className="h-4 w-4" />
+                  <Minimize2 className="h-4 w-4" />
                 ) : (
                   <Maximize2 className="h-4 w-4" />
                 )}
