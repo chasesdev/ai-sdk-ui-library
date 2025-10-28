@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Monitor, Tablet, Smartphone, Home, BookOpen } from 'lucide-react';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { ShowcaseHeader } from '@/components/layout/ShowcaseHeader';
 import { Footer } from '@/components/layout/Footer';
 
 // Import all AI SDK components
@@ -44,51 +43,12 @@ export default function MobileShowcase() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="px-4 py-3">
-          <div className="space-y-3">
-            <div>
-              <h1 className="text-2xl font-bold">AI SDK Showcase</h1>
-              <p className="text-sm text-muted-foreground">Mobile (320px-767px)</p>
-            </div>
-            <div className="flex gap-1.5 flex-wrap">
-              <Link href="/">
-                <Button variant="outline" size="sm" className="gap-1">
-                  <Home className="h-3 w-3" />
-                  <span className="text-xs">Home</span>
-                </Button>
-              </Link>
-              <Link href="/storybook">
-                <Button variant="outline" size="sm" className="gap-1">
-                  <BookOpen className="h-3 w-3" />
-                  <span className="text-xs">Storybook</span>
-                </Button>
-              </Link>
-              <div className="w-px bg-border" />
-              <Link href="/showcase/desktop">
-                <Button variant="outline" size="sm" className="gap-1">
-                  <Monitor className="h-3 w-3" />
-                  <span className="text-xs">Desktop</span>
-                </Button>
-              </Link>
-              <Link href="/showcase/tablet">
-                <Button variant="outline" size="sm" className="gap-1">
-                  <Tablet className="h-3 w-3" />
-                  <span className="text-xs">Tablet</span>
-                </Button>
-              </Link>
-              <Link href="/showcase/mobile">
-                <Button variant="default" size="sm" className="gap-1">
-                  <Smartphone className="h-3 w-3" />
-                  <span className="text-xs">Mobile</span>
-                </Button>
-              </Link>
-              <div className="w-px bg-border" />
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ShowcaseHeader
+        title="AI SDK Showcase"
+        description="Mobile (320px-767px)"
+        activeView="mobile"
+        variant="mobile"
+      />
 
       {/* Main Content */}
       <div className="px-4 py-6">

@@ -23,6 +23,7 @@ import * as BranchStories from './Branch.stories';
 import * as ConnectionStories from './Connection.stories';
 import * as EdgeStories from './Edge.stories';
 import * as NodeStories from './Node.stories';
+import * as WorkflowPlannerStories from './workflow/WorkflowPlanner.stories';
 import * as LoaderStories from './Loader.stories';
 import * as ShimmerStories from './Shimmer.stories';
 import * as InlineCitationStories from './InlineCitation.stories';
@@ -49,7 +50,7 @@ export const MobileCategory = ({ title, children, isFirst = false }) => {
 
 # AI SDK Component Library
 
-Welcome to the AI SDK Component Library! This comprehensive collection of **29 production-ready React components** is designed specifically for building AI-powered applications.
+Welcome to the AI SDK Component Library! This comprehensive collection of **30 production-ready React components** is designed specifically for building AI-powered applications.
 
 ---
 
@@ -597,7 +598,7 @@ Flexible container panels with controls.
 
 <details>
 <summary>
-  <h3 style={{ display: 'inline' }}>📊 Graph & Visualization (4 components)</h3>
+  <h3 style={{ display: 'inline' }}>📊 Graph & Visualization (5 components)</h3>
 </summary>
 
 <div style={{ marginTop: '1rem', paddingLeft: '1rem' }}>
@@ -683,6 +684,29 @@ Graph nodes for workflows and diagrams.
 <summary><strong>View all {Object.keys(NodeStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Node examples</strong></summary>
 
 {Object.entries(NodeStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <ConditionalCanvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### WorkflowPlanner
+
+Interactive workflow visualization with drag-and-drop nodes, animated edges, and code snippets.
+
+<ConditionalCanvas of={WorkflowPlannerStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(WorkflowPlannerStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} WorkflowPlanner examples</strong></summary>
+
+{Object.entries(WorkflowPlannerStories)
   .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
   .map(([storyName, story]) => (
     <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>

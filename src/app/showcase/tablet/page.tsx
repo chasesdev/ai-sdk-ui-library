@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Monitor, Tablet, Smartphone, Home, BookOpen } from 'lucide-react';
-import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { ShowcaseHeader } from '@/components/layout/ShowcaseHeader';
 import { Footer } from '@/components/layout/Footer';
 
 // Import all AI SDK components
@@ -44,51 +43,12 @@ export default function TabletShowcase() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold mb-1">AI SDK Component Showcase</h1>
-              <p className="text-lg text-muted-foreground">Tablet View (768px-1199px)</p>
-            </div>
-            <div className="flex gap-2">
-              <Link href="/">
-                <Button variant="outline" size="default" className="gap-2">
-                  <Home className="h-4 w-4" />
-                  Home
-                </Button>
-              </Link>
-              <Link href="/storybook">
-                <Button variant="outline" size="default" className="gap-2">
-                  <BookOpen className="h-4 w-4" />
-                  Storybook
-                </Button>
-              </Link>
-              <div className="w-px bg-border" />
-              <Link href="/showcase/desktop">
-                <Button variant="outline" size="default" className="gap-2">
-                  <Monitor className="h-4 w-4" />
-                  Desktop
-                </Button>
-              </Link>
-              <Link href="/showcase/tablet">
-                <Button variant="default" size="default" className="gap-2">
-                  <Tablet className="h-4 w-4" />
-                  Tablet
-                </Button>
-              </Link>
-              <Link href="/showcase/mobile">
-                <Button variant="outline" size="default" className="gap-2">
-                  <Smartphone className="h-4 w-4" />
-                  Mobile
-                </Button>
-              </Link>
-              <div className="w-px bg-border" />
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </div>
+      <ShowcaseHeader
+        title="AI SDK Component Showcase"
+        description="Tablet View (768px-1199px)"
+        activeView="tablet"
+        variant="tablet"
+      />
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
