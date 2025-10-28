@@ -76,7 +76,7 @@ export default function Home() {
             </Button>
           </Link>
 
-          <a href="http://localhost:6006" target="_blank" rel="noopener noreferrer">
+          <a href="/storybook" target="_blank" rel="noopener noreferrer">
             <Button size="lg" variant="outline" className="gap-2 text-lg px-8 w-full sm:w-auto">
               <BookOpen className="h-5 w-5" />
               Open Storybook
