@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs';
 import WorkflowPlanner from './WorkflowPlanner';
 import {
   ReactFlow,
+  ReactFlowProvider,
   Background,
   Controls,
   MiniMap,
@@ -145,19 +146,21 @@ export const NodeStatusStates: Story = {
     return (
       <div className="h-screen p-8">
         <div className="h-full">
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            nodeTypes={nodeTypes}
-            edgeTypes={edgeTypes}
-            fitView
-            fitViewOptions={{ padding: 0.2 }}
-            className="bg-gray-50 dark:bg-gray-900"
-          >
-            <Background variant={BackgroundVariant.Dots} gap={16} size={1} />
-            <Controls />
-            <MiniMap />
-          </ReactFlow>
+          <ReactFlowProvider>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              nodeTypes={nodeTypes}
+              edgeTypes={edgeTypes}
+              fitView
+              fitViewOptions={{ padding: 0.2 }}
+              className="bg-gray-50 dark:bg-gray-900"
+            >
+              <Background variant={BackgroundVariant.Dots} gap={16} size={1} />
+              <Controls />
+              <MiniMap />
+            </ReactFlow>
+          </ReactFlowProvider>
         </div>
       </div>
     );
@@ -249,27 +252,29 @@ export const WorkflowPatterns: Story = {
     return (
       <div className="h-screen p-8">
         <div className="h-full">
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            nodeTypes={nodeTypes}
-            edgeTypes={edgeTypes}
-            fitView
-            fitViewOptions={{ padding: 0.2 }}
-            className="bg-gray-50 dark:bg-gray-900"
-          >
-            <Background variant={BackgroundVariant.Dots} gap={16} size={1} />
-            <Controls />
-            <MiniMap />
-            <Panel position="top-left" className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 shadow-lg">
-              <h3 className="text-sm font-semibold mb-2">Workflow Patterns</h3>
-              <ul className="text-xs space-y-1 text-gray-600 dark:text-gray-400">
-                <li>• <strong>Linear:</strong> Top row - sequential steps</li>
-                <li>• <strong>Branching:</strong> Middle row - conditional paths</li>
-                <li>• <strong>Cyclic:</strong> Right side - loop with retry</li>
-              </ul>
-            </Panel>
-          </ReactFlow>
+          <ReactFlowProvider>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              nodeTypes={nodeTypes}
+              edgeTypes={edgeTypes}
+              fitView
+              fitViewOptions={{ padding: 0.2 }}
+              className="bg-gray-50 dark:bg-gray-900"
+            >
+              <Background variant={BackgroundVariant.Dots} gap={16} size={1} />
+              <Controls />
+              <MiniMap />
+              <Panel position="top-left" className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700 shadow-lg">
+                <h3 className="text-sm font-semibold mb-2">Workflow Patterns</h3>
+                <ul className="text-xs space-y-1 text-gray-600 dark:text-gray-400">
+                  <li>• <strong>Linear:</strong> Top row - sequential steps</li>
+                  <li>• <strong>Branching:</strong> Middle row - conditional paths</li>
+                  <li>• <strong>Cyclic:</strong> Right side - loop with retry</li>
+                </ul>
+              </Panel>
+            </ReactFlow>
+          </ReactFlowProvider>
         </div>
       </div>
     );
@@ -355,36 +360,38 @@ const theme = {
     return (
       <div className="h-screen p-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-900 dark:to-gray-800">
         <div className="h-full">
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            nodeTypes={nodeTypes}
-            edgeTypes={edgeTypes}
-            fitView
-            fitViewOptions={{ padding: 0.3 }}
-            className="bg-white/50 dark:bg-gray-800/50 rounded-2xl shadow-2xl"
-          >
-            <Background
-              variant={BackgroundVariant.Dots}
-              gap={20}
-              size={2}
-              className="opacity-50"
-            />
-            <Controls className="!bg-white/90 dark:!bg-gray-800/90 !border-purple-200 dark:!border-purple-700 !shadow-2xl" />
-            <MiniMap
-              className="!bg-white/90 dark:!bg-gray-800/90 !border-purple-200 dark:!border-purple-700 !shadow-2xl"
-              nodeColor={(node) => {
-                switch (node.data.status) {
-                  case 'success': return '#06b6d4';
-                  case 'running': return '#8b5cf6';
-                  default: return '#6b7280';
-                }
-              }}
-            />
-            <Panel position="top-center" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full shadow-2xl">
-              <span className="text-sm font-semibold">Custom Styled Workflow</span>
-            </Panel>
-          </ReactFlow>
+          <ReactFlowProvider>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              nodeTypes={nodeTypes}
+              edgeTypes={edgeTypes}
+              fitView
+              fitViewOptions={{ padding: 0.3 }}
+              className="bg-white/50 dark:bg-gray-800/50 rounded-2xl shadow-2xl"
+            >
+              <Background
+                variant={BackgroundVariant.Dots}
+                gap={20}
+                size={2}
+                className="opacity-50"
+              />
+              <Controls className="!bg-white/90 dark:!bg-gray-800/90 !border-purple-200 dark:!border-purple-700 !shadow-2xl" />
+              <MiniMap
+                className="!bg-white/90 dark:!bg-gray-800/90 !border-purple-200 dark:!border-purple-700 !shadow-2xl"
+                nodeColor={(node) => {
+                  switch (node.data.status) {
+                    case 'success': return '#06b6d4';
+                    case 'running': return '#8b5cf6';
+                    default: return '#6b7280';
+                  }
+                }}
+              />
+              <Panel position="top-center" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full shadow-2xl">
+                <span className="text-sm font-semibold">Custom Styled Workflow</span>
+              </Panel>
+            </ReactFlow>
+          </ReactFlowProvider>
         </div>
       </div>
     );
