@@ -2,6 +2,17 @@
 
 A comprehensive React component library for building AI-powered applications. Built with Next.js, TypeScript, and Tailwind CSS, featuring production-ready components optimized for AI/ML interfaces and data-rich applications.
 
+## 🚀 Live Demo
+
+Explore the library in action:
+
+- 🌐 **[Live Demo](https://ai-sdk-ui-library.vercel.app)** - Main application showcase
+- 📚 **[Storybook Documentation](https://ai-sdk-ui-library.vercel.app/storybook)** - Interactive component documentation
+- 🖥️ **[Desktop Showcase](https://ai-sdk-ui-library.vercel.app/showcase/desktop)** - Full-featured desktop layout
+- 💻 **[Tablet Showcase](https://ai-sdk-ui-library.vercel.app/showcase/tablet)** - Responsive tablet layout
+- 📱 **[Mobile Showcase](https://ai-sdk-ui-library.vercel.app/showcase/mobile)** - Optimized mobile experience
+- 🔗 **[GitHub Repository](https://github.com/chasesdev/ai-sdk-ui-library)** - Source code and contributions
+
 ## ✨ Technology Stack
 
 This library is built with:

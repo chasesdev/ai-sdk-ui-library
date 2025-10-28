@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 import { Conversation, defaultConversationMessages } from '@/components/ai-sdk/Conversation';
 import { WorkflowPlanner } from '@/components/ai-sdk/workflow';
+import { Footer } from '@/components/layout/Footer';
 
 const models = [
   { id: 'gpt-4', name: 'GPT-4' },
@@ -211,23 +212,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="border-t mt-16">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              AI SDK UI Component Library - Built with Next.js, React, TypeScript & Tailwind CSS
-            </p>
-            <div className="flex gap-4">
-              <Link href="/showcase/desktop">
-                <Button variant="ghost" size="sm">Showcase</Button>
-              </Link>
-              <a href="http://localhost:6006" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="sm">Storybook</Button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

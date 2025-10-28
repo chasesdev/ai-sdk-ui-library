@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Monitor, Tablet, Smartphone, Home, BookOpen } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { Footer } from '@/components/layout/Footer';
 
 // Import all AI SDK components
 import { Actions, defaultActions } from '@/components/ai-sdk/Actions';
@@ -57,12 +58,12 @@ export default function MobileShowcase() {
                   <span className="text-xs">Home</span>
                 </Button>
               </Link>
-              <a href="http://localhost:6006" target="_blank" rel="noopener noreferrer">
+              <Link href="/storybook">
                 <Button variant="outline" size="sm" className="gap-1">
                   <BookOpen className="h-3 w-3" />
                   <span className="text-xs">Storybook</span>
                 </Button>
-              </a>
+              </Link>
               <div className="w-px bg-border" />
               <Link href="/showcase/desktop">
                 <Button variant="outline" size="sm" className="gap-1">
@@ -522,13 +523,7 @@ export default function MobileShowcase() {
       </div>
 
       {/* Footer */}
-      <div className="border-t mt-8">
-        <div className="px-4 py-3">
-          <p className="text-center text-xs text-muted-foreground">
-            AI SDK - Mobile Showcase
-          </p>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

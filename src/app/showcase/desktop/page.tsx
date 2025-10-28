@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Monitor, Tablet, Smartphone, Home, BookOpen } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { Footer } from '@/components/layout/Footer';
 
 // Import all AI SDK components
 import { Actions, defaultActions } from '@/components/ai-sdk/Actions';
@@ -57,12 +58,12 @@ export default function DesktopShowcase() {
                   Home
                 </Button>
               </Link>
-              <a href="http://localhost:6006" target="_blank" rel="noopener noreferrer">
+              <Link href="/storybook">
                 <Button variant="outline" size="lg" className="gap-2">
                   <BookOpen className="h-5 w-5" />
                   Storybook
                 </Button>
-              </a>
+              </Link>
               <div className="w-px bg-border" />
               <Link href="/showcase/desktop">
                 <Button variant="default" size="lg" className="gap-2">
@@ -641,13 +642,7 @@ export default function DesktopShowcase() {
       </div>
 
       {/* Footer */}
-      <div className="border-t mt-16">
-        <div className="container mx-auto px-8 py-6">
-          <p className="text-center text-sm text-muted-foreground">
-            AI SDK UI Component Library - Desktop Showcase
-          </p>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }
