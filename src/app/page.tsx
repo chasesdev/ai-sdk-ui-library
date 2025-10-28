@@ -59,18 +59,16 @@ export default function Home() {
           <div className="flex justify-center mb-6">
             <Badge variant="outline" className="px-4 py-2 text-sm">
               <Sparkles className="h-4 w-4 mr-2" />
-              AI SDK UI Component Library
+              ui
             </Badge>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Component Library
-            <br />
-            <span className="text-primary">for AI SDK</span>
+            ui
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of 29+ React components designed for AI-powered applications. Built with Next.js, TypeScript, and Tailwind CSS.
+            component library for ai-sdk
           </p>
         </div>
 

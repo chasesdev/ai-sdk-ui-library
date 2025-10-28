@@ -1,17 +1,17 @@
-# ✨ AI SDK UI Library
+# ui
 
-A comprehensive React component library for building AI-powered applications. Built with Next.js, TypeScript, and Tailwind CSS, featuring production-ready components optimized for AI/ML interfaces and data-rich applications.
+component library for ai-sdk
 
 ## 🚀 Live Demo
 
 Explore the library in action:
 
-- 🌐 **[Live Demo](https://ai-sdk-ui-library.vercel.app)** - Main application showcase
-- 📚 **[Storybook Documentation](https://ai-sdk-ui-library.vercel.app/storybook)** - Interactive component documentation
-- 📱 **[Mobile Showcase](https://ai-sdk-ui-library.vercel.app/showcase/mobile)** - Optimized mobile experience
-- 💻 **[Tablet Showcase](https://ai-sdk-ui-library.vercel.app/showcase/tablet)** - Responsive tablet layout
-- 🖥️ **[Desktop Showcase](https://ai-sdk-ui-library.vercel.app/showcase/desktop)** - Full-featured desktop layout
-- 🔗 **[GitHub Repository](https://github.com/chasesdev/ai-sdk-ui-library)** - Source code and contributions
+- 🌐 **[Live Demo](https://ui-component-library.vercel.app)** - Main application showcase
+- 📚 **[Storybook Documentation](https://ui-component-library.vercel.app/storybook)** - Interactive component documentation
+- 📱 **[Mobile Showcase](https://ui-component-library.vercel.app/showcase/mobile)** - Optimized mobile experience
+- 💻 **[Tablet Showcase](https://ui-component-library.vercel.app/showcase/tablet)** - Responsive tablet layout
+- 🖥️ **[Desktop Showcase](https://ui-component-library.vercel.app/showcase/desktop)** - Full-featured desktop layout
+- 🔗 **[GitHub Repository](https://github.com/chasesdev/ui-component-library)** - Source code and contributions
 
 ## ✨ Technology Stack
 
@@ -149,7 +149,7 @@ Both the demo app and component documentation are deployed in a single Vercel pr
 src/
 ├── app/                    # Next.js App Router demo pages
 ├── components/
-│   ├── ai-sdk/            # AI SDK UI components
+│   ├── ai-sdk/            # UI Component Library - for AI SDK components
 │   │   ├── Connection.tsx         # Connection status component
 │   │   ├── Connection.stories.tsx # Storybook stories
 │   │   └── ...                    # More components

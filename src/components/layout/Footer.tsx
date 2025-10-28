@@ -10,7 +10,7 @@ export function Footer() {
           {/* Left side: Project info */}
           <div className="text-center md:text-left">
             <p className="text-sm font-medium text-foreground">
-              AI SDK UI Component Library
+              UI Component Library - for AI SDK
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               Built with Next.js, React, TypeScript & Tailwind CSS
@@ -45,7 +45,7 @@ export function Footer() {
               </Button>
             </Link>
             <a
-              href="https://github.com/chasesdev/ai-sdk-ui-library"
+              href="https://github.com/chasesdev/ui-component-library"
               target="_blank"
               rel="noopener noreferrer"
             >

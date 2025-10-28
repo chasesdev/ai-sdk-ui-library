@@ -161,7 +161,7 @@ export default function DesktopShowcase() {
           >
             <Context
               items={[
-                { id: '1', type: 'system', title: 'Project', content: 'AI SDK UI Library' },
+                { id: '1', type: 'system', title: 'Project', content: 'UI Component Library - for AI SDK' },
                 { id: '2', type: 'system', title: 'Framework', content: 'Next.js + React' },
                 { id: '3', type: 'code', title: 'Language', content: 'TypeScript' },
               ]}

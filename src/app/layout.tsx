@@ -15,21 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI SDK UI Library - React Components for AI Applications",
-  description: "A comprehensive React component library for building AI-powered applications. 29 production-ready components built with Next.js, TypeScript, and Tailwind CSS.",
+  title: "ui - component library for ai-sdk",
+  description: "component library for ai-sdk",
   keywords: ["AI SDK", "UI Library", "React Components", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "Component Library", "Storybook"],
   authors: [{ name: "@chasesdev", url: "https://github.com/chasesdev" }],
   openGraph: {
-    title: "AI SDK UI Library",
-    description: "Production-ready React components for AI-powered applications",
-    url: "https://ai-sdk-ui-library.vercel.app",
-    siteName: "AI SDK UI Library",
+    title: "ui",
+    description: "component library for ai-sdk",
+    url: "https://ui-component-library.vercel.app",
+    siteName: "ui",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI SDK UI Library",
-    description: "Production-ready React components for AI-powered applications",
+    title: "ui",
+    description: "component library for ai-sdk",
   },
 };
 
