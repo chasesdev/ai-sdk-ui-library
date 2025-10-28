@@ -14,6 +14,12 @@ const config: StorybookConfig = {
   },
   docs: {},
   // staticDirs removed to prevent circular copy when building to public/storybook/
+
+  // Set base path for production deployment at /storybook/
+  managerHead: (head) => `
+    ${head}
+    <base href="/storybook/">
+  `,
 };
 
 export default config;
