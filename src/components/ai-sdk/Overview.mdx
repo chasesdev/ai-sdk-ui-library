@@ -1,0 +1,866 @@
+import { Meta, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as ConversationStories from './Conversation.stories';
+import * as MessageStories from './Message.stories';
+import * as PromptInputStories from './PromptInput.stories';
+import * as SuggestionStories from './Suggestion.stories';
+import * as ReasoningStories from './Reasoning.stories';
+import * as ChainOfThoughtStories from './ChainOfThought.stories';
+import * as ToolStories from './Tool.stories';
+import * as ResponseStories from './Response.stories';
+import * as ContextStories from './Context.stories';
+import * as PlanStories from './Plan.stories';
+import * as TaskStories from './Task.stories';
+import * as ActionsStories from './Actions.stories';
+import * as ControlsStories from './Controls.stories';
+import * as ToolbarStories from './Toolbar.stories';
+import * as ArtifactStories from './Artifact.stories';
+import * as BracesCodeBlockStories from './BracesCodeBlock.stories';
+import * as CanvasStories from './Canvas.stories';
+import * as ImageStories from './Image.stories';
+import * as WebPreviewStories from './WebPreview.stories';
+import * as PanelStories from './Panel.stories';
+import * as BranchStories from './Branch.stories';
+import * as ConnectionStories from './Connection.stories';
+import * as EdgeStories from './Edge.stories';
+import * as NodeStories from './Node.stories';
+import * as LoaderStories from './Loader.stories';
+import * as ShimmerStories from './Shimmer.stories';
+import * as InlineCitationStories from './InlineCitation.stories';
+import * as SourcesStories from './Sources.stories';
+import * as OpenInChatStories from './OpenInChat.stories';
+
+<Meta title="AI SDK Components/Overview" />
+
+# AI SDK Component Library
+
+Welcome to the AI SDK Component Library! This comprehensive collection of **29 production-ready React components** is designed specifically for building AI-powered applications.
+
+---
+
+**🏠 [Home Page](/)** | **📱 [Desktop Showcase](/showcase/desktop)** | **💻 [Tablet Showcase](/showcase/tablet)** | **📱 [Mobile Showcase](/showcase/mobile)**
+
+---
+
+## About
+
+These components are built with modern web technologies and best practices:
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - Beautiful, accessible components
+- **Radix UI** - Unstyled, accessible primitives
+
+All components support **dark mode** out of the box using Tailwind's class-based dark mode. Use the background selector (paint palette icon) in the Storybook toolbar above to switch between light and dark themes!
+
+---
+
+## Component Categories
+
+<details>
+<summary>
+  <h3 style={{ display: 'inline' }}>💬 Conversation & Chat (4 components)</h3>
+</summary>
+
+<div style={{ marginTop: '1rem', paddingLeft: '1rem' }}>
+
+Components for building chat interfaces and conversational AI experiences.
+
+### Conversation
+
+Full-featured conversation interface with message history and interaction features.
+
+<Canvas of={ConversationStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ConversationStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Conversation examples</strong></summary>
+
+{Object.entries(ConversationStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Message
+
+Individual message display component with support for various roles and states.
+
+<Canvas of={MessageStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(MessageStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Message examples</strong></summary>
+
+{Object.entries(MessageStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### PromptInput
+
+Input field for user prompts with suggestions and attachments.
+
+<Canvas of={PromptInputStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(PromptInputStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} PromptInput examples</strong></summary>
+
+{Object.entries(PromptInputStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Suggestion
+
+Suggestion chip component for quick response options.
+
+<Canvas of={SuggestionStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(SuggestionStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Suggestion examples</strong></summary>
+
+{Object.entries(SuggestionStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>
+  <h3 style={{ display: 'inline' }}>🧠 AI Reasoning & Planning (7 components)</h3>
+</summary>
+
+<div style={{ marginTop: '1rem', paddingLeft: '1rem' }}>
+
+Components for displaying AI reasoning, planning processes, and task execution.
+
+### Reasoning
+
+Display AI reasoning steps and thought processes.
+
+<Canvas of={ReasoningStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ReasoningStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Reasoning examples</strong></summary>
+
+{Object.entries(ReasoningStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### ChainOfThought
+
+Visualize step-by-step chain-of-thought reasoning.
+
+<Canvas of={ChainOfThoughtStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ChainOfThoughtStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} ChainOfThought examples</strong></summary>
+
+{Object.entries(ChainOfThoughtStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Tool
+
+Display tool and function calls with inputs and outputs.
+
+<Canvas of={ToolStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ToolStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Tool examples</strong></summary>
+
+{Object.entries(ToolStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Response
+
+Formatted display of AI responses.
+
+<Canvas of={ResponseStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ResponseStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Response examples</strong></summary>
+
+{Object.entries(ResponseStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Context
+
+Display contextual information for AI reasoning.
+
+<Canvas of={ContextStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ContextStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Context examples</strong></summary>
+
+{Object.entries(ContextStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Plan
+
+Display AI-generated plans with steps and progress.
+
+<Canvas of={PlanStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(PlanStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Plan examples</strong></summary>
+
+{Object.entries(PlanStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Task
+
+Individual task component with status and actions.
+
+<Canvas of={TaskStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(TaskStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Task examples</strong></summary>
+
+{Object.entries(TaskStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>
+  <h3 style={{ display: 'inline' }}>🎮 Tool & Action (3 components)</h3>
+</summary>
+
+<div style={{ marginTop: '1rem', paddingLeft: '1rem' }}>
+
+Interactive components for user actions and controls.
+
+### Actions
+
+Action button groups for common operations.
+
+<Canvas of={ActionsStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ActionsStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Actions examples</strong></summary>
+
+{Object.entries(ActionsStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Controls
+
+Playback and interaction controls.
+
+<Canvas of={ControlsStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ControlsStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Controls examples</strong></summary>
+
+{Object.entries(ControlsStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Toolbar
+
+Customizable toolbar with action buttons.
+
+<Canvas of={ToolbarStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ToolbarStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Toolbar examples</strong></summary>
+
+{Object.entries(ToolbarStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>
+  <h3 style={{ display: 'inline' }}>🎨 Content Display (6 components)</h3>
+</summary>
+
+<div style={{ marginTop: '1rem', paddingLeft: '1rem' }}>
+
+Components for displaying AI-generated content.
+
+### Artifact
+
+Display generated artifacts like code and documents.
+
+<Canvas of={ArtifactStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ArtifactStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Artifact examples</strong></summary>
+
+{Object.entries(ArtifactStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### BracesCodeBlock
+
+Syntax-highlighted code blocks with language support.
+
+<Canvas of={BracesCodeBlockStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(BracesCodeBlockStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} BracesCodeBlock examples</strong></summary>
+
+{Object.entries(BracesCodeBlockStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Canvas
+
+Interactive drawing and visualization canvas.
+
+<Canvas of={CanvasStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(CanvasStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Canvas examples</strong></summary>
+
+{Object.entries(CanvasStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Image
+
+Display AI-generated or referenced images.
+
+<Canvas of={ImageStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ImageStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Image examples</strong></summary>
+
+{Object.entries(ImageStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### WebPreview
+
+Preview web pages and links with metadata.
+
+<Canvas of={WebPreviewStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(WebPreviewStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} WebPreview examples</strong></summary>
+
+{Object.entries(WebPreviewStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Panel
+
+Flexible container panels with controls.
+
+<Canvas of={PanelStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(PanelStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Panel examples</strong></summary>
+
+{Object.entries(PanelStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>
+  <h3 style={{ display: 'inline' }}>📊 Graph & Visualization (4 components)</h3>
+</summary>
+
+<div style={{ marginTop: '1rem', paddingLeft: '1rem' }}>
+
+Components for flowcharts, workflows, and graph visualizations.
+
+### Branch
+
+Workflow branches and decision points.
+
+<Canvas of={BranchStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(BranchStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Branch examples</strong></summary>
+
+{Object.entries(BranchStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Connection
+
+Visual connections between elements.
+
+<Canvas of={ConnectionStories.Connected} />
+
+<details>
+<summary><strong>View all {Object.keys(ConnectionStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Connection examples</strong></summary>
+
+{Object.entries(ConnectionStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Edge
+
+Graph edges with directional indicators.
+
+<Canvas of={EdgeStories.Straight} />
+
+<details>
+<summary><strong>View all {Object.keys(EdgeStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Edge examples</strong></summary>
+
+{Object.entries(EdgeStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Node
+
+Graph nodes for workflows and diagrams.
+
+<Canvas of={NodeStories.Circle} />
+
+<details>
+<summary><strong>View all {Object.keys(NodeStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Node examples</strong></summary>
+
+{Object.entries(NodeStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+</div>
+
+</details>
+
+---
+
+<details>
+<summary>
+  <h3 style={{ display: 'inline' }}>⚡ UI Elements (5 components)</h3>
+</summary>
+
+<div style={{ marginTop: '1rem', paddingLeft: '1rem' }}>
+
+Essential UI elements for loading states, citations, and sources.
+
+### Loader
+
+Loading spinners and animations.
+
+<Canvas of={LoaderStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(LoaderStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Loader examples</strong></summary>
+
+{Object.entries(LoaderStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Shimmer
+
+Skeleton loading shimmer effects.
+
+<Canvas of={ShimmerStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(ShimmerStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Shimmer examples</strong></summary>
+
+{Object.entries(ShimmerStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### InlineCitation
+
+Inline reference citations.
+
+<Canvas of={InlineCitationStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(InlineCitationStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} InlineCitation examples</strong></summary>
+
+{Object.entries(InlineCitationStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### Sources
+
+List of information sources.
+
+<Canvas of={SourcesStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(SourcesStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} Sources examples</strong></summary>
+
+{Object.entries(SourcesStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+---
+
+### OpenInChat
+
+Button to open content in chat interface.
+
+<Canvas of={OpenInChatStories.Default} />
+
+<details>
+<summary><strong>View all {Object.keys(OpenInChatStories).filter(k => k !== 'default' && k !== '__namedExportsOrder').length} OpenInChat examples</strong></summary>
+
+{Object.entries(OpenInChatStories)
+  .filter(([key]) => key !== 'default' && key !== '__namedExportsOrder')
+  .map(([storyName, story]) => (
+    <div key={storyName} style={{ borderTop: '1px solid #e5e7eb', paddingTop: '1rem', marginTop: '1rem' }}>
+      <h4>{storyName.replace(/([A-Z])/g, ' $1').trim()}</h4>
+      <Canvas of={story} />
+    </div>
+  ))
+}
+
+</details>
+
+</div>
+
+</details>
+
+---
+
+## Getting Started
+
+Each component is fully documented with:
+
+- **Props** - Detailed prop types and descriptions
+- **Examples** - Multiple usage examples and variants
+- **Stories** - Interactive examples you can modify
+- **Best Practices** - Recommended usage patterns
+
+Expand any category above to explore components and their interactive examples.
+
+## Features
+
+### Dark Mode Support
+
+All components are designed with dark mode in mind. They use semantic color tokens that automatically adapt to the selected theme:
+
+- `bg-background` / `bg-foreground`
+- `text-foreground` / `text-muted-foreground`
+- `border-border`
+- `bg-primary` / `text-primary`
+
+**To toggle dark mode in Storybook:** Click the background color selector in the toolbar at the top (looks like a paint palette icon) and switch between "light" and "dark" backgrounds. The components will automatically update to show their dark mode variants!
+
+### Accessibility
+
+Components are built with accessibility in mind using:
+
+- Semantic HTML elements
+- ARIA attributes where needed
+- Keyboard navigation support
+- Screen reader friendly
+
+### Responsive Design
+
+Components are responsive and work across different screen sizes:
+
+- Mobile (320px-767px)
+- Tablet (768px-1199px)
+- Desktop (1200px+)
+
+Check out our [showcase pages](/) to see components at different breakpoints!
+
+### TypeScript Support
+
+All components are written in TypeScript with full type definitions for props and return types.
+
+## Resources
+
+- **[Home Page](/)** - Library overview with examples
+- **[Desktop Showcase](/showcase/desktop)** - All components on desktop
+- **[Tablet Showcase](/showcase/tablet)** - All components on tablet
+- **[Mobile Showcase](/showcase/mobile)** - All components on mobile
+- **[GitHub](https://github.com/yourusername/ai-sdk-ui-library)** - Source code
+
+## Need Help?
+
+If you have questions or need help with any component, please check the individual component documentation or reach out through GitHub issues.
+
+---
+
+**Happy building!** 🚀
