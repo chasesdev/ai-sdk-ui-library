@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .sparkle { fill: #FFD700; }
+    </style>
+  </defs>
+
+  <!-- Large center sparkle -->
+  <path class="sparkle" d="M50 10 L55 30 L75 35 L55 40 L50 60 L45 40 L25 35 L45 30 Z"/>
+
+  <!-- Small top-right sparkle -->
+  <path class="sparkle" d="M75 20 L77 27 L84 29 L77 31 L75 38 L73 31 L66 29 L73 27 Z"/>
+
+  <!-- Small bottom-left sparkle -->
+  <path class="sparkle" d="M25 70 L27 77 L34 79 L27 81 L25 88 L23 81 L16 79 L23 77 Z"/>
+
+  <!-- Small bottom-right sparkle -->
+  <path class="sparkle" d="M70 75 L72 82 L79 84 L72 86 L70 93 L68 86 L61 84 L68 82 Z"/>
+</svg>

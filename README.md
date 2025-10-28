@@ -1,4 +1,4 @@
-# 🎨 AI SDK UI Library
+# ✨ AI SDK UI Library
 
 A comprehensive React component library for building AI-powered applications. Built with Next.js, TypeScript, and Tailwind CSS, featuring production-ready components optimized for AI/ML interfaces and data-rich applications.
 
@@ -36,10 +36,6 @@ This library is built with:
 - **🐻 Zustand** - Simple, scalable state management
 - **🔄 TanStack Query** - Powerful data synchronization for React
 - **🌐 Axios** - Promise-based HTTP client
-
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
 
 ### 🎨 Advanced UI Features
 - **📊 TanStack Table** - Headless UI for building tables and datagrids
