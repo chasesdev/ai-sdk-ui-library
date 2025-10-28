@@ -45,7 +45,7 @@ export function Footer() {
               </Button>
             </Link>
             <a
-              href="https://github.com/chasesdev/ui-component-library"
+              href="https://github.com/chasesdev/ui"
               target="_blank"
               rel="noopener noreferrer"
             >

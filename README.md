@@ -11,7 +11,7 @@ Explore the library in action:
 - 📱 **[Mobile Showcase](https://ui-component-library.vercel.app/showcase/mobile)** - Optimized mobile experience
 - 💻 **[Tablet Showcase](https://ui-component-library.vercel.app/showcase/tablet)** - Responsive tablet layout
 - 🖥️ **[Desktop Showcase](https://ui-component-library.vercel.app/showcase/desktop)** - Full-featured desktop layout
-- 🔗 **[GitHub Repository](https://github.com/chasesdev/ui-component-library)** - Source code and contributions
+- 🔗 **[GitHub Repository](https://github.com/chasesdev/ui)** - Source code and contributions
 
 ## ✨ Technology Stack
 
