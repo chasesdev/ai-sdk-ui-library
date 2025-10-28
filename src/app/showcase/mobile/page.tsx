@@ -51,7 +51,7 @@ export default function MobileShowcase() {
       />
 
       {/* Main Content */}
-      <div className="px-4 py-6">
+      <div className="py-6">
         <div className="space-y-4">
 
           {/* Actions Component */}

@@ -90,16 +90,20 @@ export default function Home() {
             </Button>
           </a>
         </div>
+      </div>
 
-        {/* Interactive Examples */}
-        <div className="mb-20">
+      {/* Interactive Examples */}
+      <div className="mb-20">
+        <div className="px-4 lg:container lg:mx-auto mb-8">
           <h2 className="text-3xl font-bold text-center mb-4">
             Examples
           </h2>
-          <p className="text-center text-muted-foreground mb-8 text-lg">
+          <p className="text-center text-muted-foreground text-lg">
             See some real-world use cases
           </p>
+        </div>
 
+        <div className="lg:container lg:mx-auto lg:px-4">
           <div className="space-y-6">
             {/* Chatbot Example */}
             <Card className="border-2 hover:border-primary transition-colors overflow-hidden">
