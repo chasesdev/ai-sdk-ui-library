@@ -13,7 +13,7 @@ const config: StorybookConfig = {
     options: {},
   },
   docs: {},
-  staticDirs: ['../public'],
+  // staticDirs removed to prevent circular copy when building to public/storybook/
 };
 
 export default config;
