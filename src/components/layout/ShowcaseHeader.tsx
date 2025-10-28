@@ -35,7 +35,7 @@ export function ShowcaseHeader({
   const useContainer = variant !== 'mobile';
 
   return (
-    <div className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="border-b bg-background">
       <div className={`${useContainer ? 'container mx-auto' : ''} ${containerPadding}`}>
         <div className={useFlexColumn ? 'space-y-3' : 'flex items-center justify-between'}>
           <div>
