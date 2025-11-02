@@ -1,4 +1,7 @@
 # ui
+Demo: https://ui-component-library-ai-sdk.vercel.app/
+
+See also: https://ai-sdk-gluestack.vercel.app/
 
 component library for ai-sdk
 
