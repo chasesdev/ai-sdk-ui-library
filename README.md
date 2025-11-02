@@ -8,6 +8,7 @@ component library for ai-sdk
 want cross platform gluestack instead? 
 Try these:
 repo - https://github.com/chasesdev/ai-sdk-gluestack 
+
 demo - https://ai-sdk-gluestack.vercel.app/
 
 Explore the library in action:
