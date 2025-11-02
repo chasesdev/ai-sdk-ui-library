@@ -1,11 +1,13 @@
 # ui
-Demo: https://ui-component-library-ai-sdk.vercel.app/
+Demo - https://ui-component-library-ai-sdk.vercel.app/
 
-See also: https://github.com/chasesdev/ai-sdk-gluestack https://ai-sdk-gluestack.vercel.app/
+w
 
 component library for ai-sdk
 
-## 🚀 Live Demo
+want cross platform gluestack instead? 
+repo - https://github.com/chasesdev/ai-sdk-gluestack 
+demo - https://ai-sdk-gluestack.vercel.app/
 
 Explore the library in action:
 
